@@ -51,7 +51,7 @@
     }
     .post-image
     {
-        @apply lg:w-auto lg:h-auto aspect-square;
+        @apply lg:w-full lg:h-auto aspect-square;
     }
     .post-details-container 
     {
@@ -71,7 +71,7 @@
     }
     .avatar-body
     {
-        @apply flex flex-col justify-center;
+        @apply flex flex-col justify-center -space-y-1;
     }
     .avatar-user-name
     {
@@ -79,7 +79,7 @@
     }
     .avatar-user-location
     {
-        @apply text-xs font-semibold;
+        @apply text-xs font-semibold text-grey-8B;
     }
     .post-header-options
     {
@@ -87,7 +87,7 @@
     }
     .dropdown-container
     {
-        @apply relative;
+        @apply relative -mt-2.5;
     }
     .post-desc
     {
@@ -95,7 +95,7 @@
     }
     .more-posts-container
     {
-        @apply flex flex-col pt-9;
+        @apply flex flex-col pt-3 lg:pt-9;
     }
     .more-images-container
     {
@@ -124,7 +124,7 @@
     }
     .purchase-item-desc
     {
-        @apply text-sm font-semibold font-open-sans;
+        @apply text-sm font-semibold font-open-sans text-grey-8B;
     }
     .purchase-item-price
     {
