@@ -1,3 +1,150 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply flex items-center justify-center space-x-3 border-1.5 font-semibold font-open-sans rounded-full;
+    }
+    .btn-outline-black {
+        @apply border-black-light hover:bg-black-light hover:text-white text-black-light;
+    }
+    .btn-solid-black {
+        @apply border-black-light bg-black-light hover:bg-black-lighter text-white;
+    }
+    .btn-block {
+        @apply w-full;
+    }
+    .btn-small {
+        @apply text-sm px-8 py-1;
+    }
+    .btn-large {
+        @apply font-bold text-lg py-2;
+    }
+    .purchase-list {
+        @apply flex flex-col mt-7 mb-5;
+    }
+    .purchase-list-item {
+        @apply flex items-center justify-between border border-grey-D8 hover:shadow w-full rounded-10 py-4 px-5;
+    }
+    .divider {
+        @apply border-grey-D8;
+    }
+    .modal-container-overlay {
+        @apply flex w-full h-full lg:h-screen lg:overflow-y-auto p-6 lg:p-10 items-center justify-center bg-black bg-opacity-70;
+    }
+    .modal-container 
+    {
+        @apply relative flex max-w-7xl w-full h-full p-3 md:p-5 lg:p-7 bg-white rounded-lg lg:rounded-2xl;
+    }
+    .btn-close-modal 
+    {
+        @apply absolute h-6 lg:h-auto w-6 lg:w-auto -top-2 lg:top-0 -right-2.5 lg:-right-10 border-1.5 border-transparent bg-black lg:bg-transparent text-white hover:border-white rounded-full p-1 lg:p-1.5;
+    }
+    .modal-content 
+    {
+        @apply flex flex-col lg:flex-row gap-9;
+    }
+    .post-image-container
+    {
+        @apply flex flex-shrink-0;
+    }
+    .post-image
+    {
+        @apply lg:w-auto lg:h-auto aspect-square;
+    }
+    .post-details-container 
+    {
+        @apply flex flex-col;
+    }
+    .post-header
+    {
+        @apply flex items-center justify-between;
+    }
+    .avatar
+    {
+        @apply flex items-center space-x-3.5;
+    }
+    .avatar-image
+    {
+        @apply rounded-full border-2 border-white;
+    }
+    .avatar-body
+    {
+        @apply flex flex-col justify-center;
+    }
+    .avatar-user-name
+    {
+        @apply text-lg font-bold text-black-light;
+    }
+    .avatar-user-location
+    {
+        @apply text-xs font-semibold;
+    }
+    .post-header-options
+    {
+        @apply flex items-center space-x-5;
+    }
+    .dropdown-container
+    {
+        @apply relative;
+    }
+    .post-desc
+    {
+        @apply text-sm font-open-sans text-black;
+    }
+    .more-posts-container
+    {
+        @apply flex flex-col pt-9;
+    }
+    .more-images-container
+    {
+        @apply flex items-center gap-3.5 justify-between;
+    }
+    .text-subtitle
+    {
+        @apply text-lg text-black font-open-sans;
+    }
+
+    .divider-1
+    {
+        @apply mt-1.5 mb-4;
+    }
+    .divider-2
+    {
+        @apply mt-5 mb-4;
+    }
+    .purchase-item-content
+    {
+        @apply flex flex-col space-y-2;
+    }
+    .purchase-item-heading
+    {
+        @apply text-lg font-semibold font-open-sans;
+    }
+    .purchase-item-desc
+    {
+        @apply text-sm font-semibold font-open-sans;
+    }
+    .purchase-item-price
+    {
+        @apply text-2xl font-semibold to-black-light;
+    }
+    .purchase-item-price-wrapper
+    {
+        @apply flex items-center space-x-7;
+    }
+    .post-purchase-buttons
+    {
+        @apply flex flex-col space-y-3 w-full;
+    }
+    .post-action-buttons
+    {
+        @apply flex items-center space-x-6;
+    }
+    .post-likes-info
+    {
+        @apply text-sm font-open-sans pt-3.5;
+    }
+
+}
