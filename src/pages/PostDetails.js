@@ -12,11 +12,18 @@ import Img4 from '../assets/images/image-4.jpg'
 import avatar from '../assets/images/profile.png'
  
 const  PostDetails = () =>{
-const [following, setFollowing] = useState(false)
-  const onFollow = () =>{
-  setFollowing(true)
-  }
-  return (
+    const [following, setFollowing] = useState(false)
+    const [unfollow, setUnfollow] = useState(false)
+      const onFollow = () =>{
+      setFollowing(true)
+      }
+      const onHover =()=>{
+        setUnfollow(true)
+      }
+      const onHoverLeave =()=>{
+        setUnfollow(false)
+      }
+    return (
       <>
     <div class="post-image-container">
                     <img class="post-image" src={sliderImg} alt="post-image-1"/>
@@ -31,9 +38,8 @@ const [following, setFollowing] = useState(false)
                             </div>
                         </div>
                         <div class="post-header-options">
-                            <button onClick={onFollow} class={ ` ${following ? 'hover:bg-red-500 hover:bg-opacity-40 hover:text-red-600' : ''} btn btn-small btn-outline-black`}>
-                             {following ? 'Following' : 'Follow'} 
-                             
+                            <button onMouseEnter={onHover} onMouseLeave={onHoverLeave} onClick={onFollow} class={ ` ${following ? 'hover:bg-red-500 hover:bg-opacity-40 hover:text-red-600' : ''} btn btn-small btn-outline-black`}>
+                             {following && !unfollow ? 'Following' : following && unfollow ? 'Unfollow' : 'Follow'}
                             </button>
                             <div class="dropdown-container">
                                 <button>
@@ -77,8 +83,8 @@ const [following, setFollowing] = useState(false)
                     <hr class="divider divider-2" />
                     <div class="post-action-buttons">
                         <button><img src={like} alt="like"/></button>
-                        <button><img src={share} alt="like"/></button>
                         <button><img src={save} alt="like"/></button>
+                        <button><img src={share} alt="like"/></button>
                     </div>
                     <p class="post-likes-info">
                         Liked by <a class="font-semibold" href="#">Amanda Evans</a> and <a class="font-semibold" href="#">10 others</a>

@@ -12,7 +12,8 @@ module.exports = {
         },
         grey: {
           DEFAULT: '#8B8B8B',
-          D8: '#D8D8D8'
+          D8: '#D8D8D8',
+          '8B': '#8B8B8B',
         }
       },
       fontFamily: {
