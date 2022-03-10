@@ -12,9 +12,9 @@ const  App =()=> {
   }
   return (
     <div className="App">
-      <Modal open={isOpen} onClose={closeModal}>
+      <Modal className="grid grid-cols-12" open={isOpen} onClose={closeModal}>
         <PostDetails/>
-        </Modal>
+      </Modal>
     </div>
   );
 }
